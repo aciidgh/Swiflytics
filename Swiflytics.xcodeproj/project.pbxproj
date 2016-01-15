@@ -7,21 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B5ACAFBC2DE97AF30B8A649 /* Pods_Swiflytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB8564F5041A3E3B11DE65F /* Pods_Swiflytics.framework */; };
 		BCD38D581C48D6CD009B1B8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD38D571C48D6CD009B1B8B /* AppDelegate.swift */; };
-		BCD38D5A1C48D6CD009B1B8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD38D591C48D6CD009B1B8B /* ViewController.swift */; };
+		BCD38D5A1C48D6CD009B1B8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD38D591C48D6CD009B1B8B /* LoginViewController.swift */; };
 		BCD38D5D1C48D6CD009B1B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD38D5B1C48D6CD009B1B8B /* Main.storyboard */; };
 		BCD38D5F1C48D6CD009B1B8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD38D5E1C48D6CD009B1B8B /* Assets.xcassets */; };
 		BCD38D621C48D6CD009B1B8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD38D601C48D6CD009B1B8B /* LaunchScreen.storyboard */; };
+		BCD38D6A1C48DEE2009B1B8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCD38D691C48DEE2009B1B8B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D6281B1508A15FFC0DE619E /* Pods-Swiflytics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiflytics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swiflytics/Pods-Swiflytics.debug.xcconfig"; sourceTree = "<group>"; };
+		53214255994618A90542546F /* Pods-Swiflytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiflytics.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swiflytics/Pods-Swiflytics.release.xcconfig"; sourceTree = "<group>"; };
+		7FB8564F5041A3E3B11DE65F /* Pods_Swiflytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiflytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD38D541C48D6CD009B1B8B /* Swiflytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiflytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD38D571C48D6CD009B1B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BCD38D591C48D6CD009B1B8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BCD38D591C48D6CD009B1B8B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BCD38D5C1C48D6CD009B1B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCD38D5E1C48D6CD009B1B8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCD38D611C48D6CD009B1B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCD38D631C48D6CD009B1B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCD38D691C48DEE2009B1B8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BCD38D6B1C48DF5B009B1B8B /* Swiflytics-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swiflytics-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +36,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B5ACAFBC2DE97AF30B8A649 /* Pods_Swiflytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B09B3BC483DE19E8D86BD88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FB8564F5041A3E3B11DE65F /* Pods_Swiflytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BCD38D4B1C48D6CD009B1B8B = {
 			isa = PBXGroup;
 			children = (
 				BCD38D561C48D6CD009B1B8B /* Swiflytics */,
 				BCD38D551C48D6CD009B1B8B /* Products */,
+				CDBBFE27CA01C81A13020261 /* Pods */,
+				2B09B3BC483DE19E8D86BD88 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +73,24 @@
 			isa = PBXGroup;
 			children = (
 				BCD38D571C48D6CD009B1B8B /* AppDelegate.swift */,
-				BCD38D591C48D6CD009B1B8B /* ViewController.swift */,
+				BCD38D591C48D6CD009B1B8B /* LoginViewController.swift */,
 				BCD38D5B1C48D6CD009B1B8B /* Main.storyboard */,
 				BCD38D5E1C48D6CD009B1B8B /* Assets.xcassets */,
 				BCD38D601C48D6CD009B1B8B /* LaunchScreen.storyboard */,
 				BCD38D631C48D6CD009B1B8B /* Info.plist */,
+				BCD38D691C48DEE2009B1B8B /* GoogleService-Info.plist */,
+				BCD38D6B1C48DF5B009B1B8B /* Swiflytics-Bridging-Header.h */,
 			);
 			path = Swiflytics;
+			sourceTree = "<group>";
+		};
+		CDBBFE27CA01C81A13020261 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D6281B1508A15FFC0DE619E /* Pods-Swiflytics.debug.xcconfig */,
+				53214255994618A90542546F /* Pods-Swiflytics.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +100,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCD38D661C48D6CD009B1B8B /* Build configuration list for PBXNativeTarget "Swiflytics" */;
 			buildPhases = (
+				ED855EE68801C944503952BC /* Check Pods Manifest.lock */,
 				BCD38D501C48D6CD009B1B8B /* Sources */,
 				BCD38D511C48D6CD009B1B8B /* Frameworks */,
 				BCD38D521C48D6CD009B1B8B /* Resources */,
+				590F024CB08797483F32C097 /* Embed Pods Frameworks */,
+				D4CDF9FCF5C81F79ADC51589 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCD38D621C48D6CD009B1B8B /* LaunchScreen.storyboard in Resources */,
+				BCD38D6A1C48DEE2009B1B8B /* GoogleService-Info.plist in Resources */,
 				BCD38D5F1C48D6CD009B1B8B /* Assets.xcassets in Resources */,
 				BCD38D5D1C48D6CD009B1B8B /* Main.storyboard in Resources */,
 			);
@@ -130,12 +163,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		590F024CB08797483F32C097 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swiflytics/Pods-Swiflytics-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4CDF9FCF5C81F79ADC51589 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swiflytics/Pods-Swiflytics-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED855EE68801C944503952BC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BCD38D501C48D6CD009B1B8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCD38D5A1C48D6CD009B1B8B /* ViewController.swift in Sources */,
+				BCD38D5A1C48D6CD009B1B8B /* LoginViewController.swift in Sources */,
 				BCD38D581C48D6CD009B1B8B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,23 +326,30 @@
 		};
 		BCD38D671C48D6CD009B1B8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D6281B1508A15FFC0DE619E /* Pods-Swiflytics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Swiflytics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = im.ankit.Swiflytics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swiflytics/Swiflytics-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		BCD38D681C48D6CD009B1B8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53214255994618A90542546F /* Pods-Swiflytics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Swiflytics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = im.ankit.Swiflytics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swiflytics/Swiflytics-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -284,6 +372,7 @@
 				BCD38D681C48D6CD009B1B8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
