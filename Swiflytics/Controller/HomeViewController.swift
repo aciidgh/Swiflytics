@@ -48,26 +48,14 @@ final class HomeViewController: UIViewController, StoryboardInstantiable {
     }
 
     func fetchData(completion: ()->()) {
-    
         let clientID = GIDSignIn.sharedInstance().clientID
-        
         let accessToken = GIDSignIn.sharedInstance().currentUser.authentication.accessToken
-        
-        let url = "https://www.googleapis.com/analytics/v3/management/accountSummaries?key=\(clientID)&access_token=\(accessToken)"
-        
-        NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: url)!) { (data, response, error) -> Void in
-            guard let data = data else {
-                return
-            }
-            if let jsonObject = try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)["items"] as! NSArray {
-               self.accountSummary = GAAccountSummary.summaryFromArray(jsonObject)
-            }
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        GAAccountSummary.fetchSummary(clientID, accessToken: accessToken) {
+            self.accountSummary = $0
+            onMainThread {
                 completion()
-            })
-            
-        }.resume()
-        
+            }
+        }
     }
     
     @IBAction func logoutPressed() {
@@ -96,7 +84,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return accountSummary[section].views.count
+        return accountSummary[section].allProfiles.count
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -106,10 +94,10 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(String(HomeTableViewCell), forIndexPath: indexPath) as! HomeTableViewCell
         
-        let view = accountSummary[indexPath.section].views[indexPath.row]
+        let profile = accountSummary[indexPath.section].allProfiles[indexPath.row]
         
-        cell.mainTitle.text = view.propertyName
-        cell.subTitle.text = view.viewName
+        cell.mainTitle.text = profile.propertyName
+        cell.subTitle.text = profile.profileName
         
         return cell
     }

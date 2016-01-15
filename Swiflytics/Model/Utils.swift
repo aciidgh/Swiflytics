@@ -17,3 +17,9 @@ extension StoryboardInstantiable {
         return storyboard.instantiateViewControllerWithIdentifier(Self.storyboardID) as? ViewController
     }
 }
+
+func onMainThread(closure: () -> ()) {
+    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        closure()
+    })
+}

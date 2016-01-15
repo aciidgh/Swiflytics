@@ -24,9 +24,11 @@ PODS:
   - GoogleSymbolUtilities (1.0.3)
   - GoogleUtilities (1.1.0):
     - GoogleSymbolUtilities (~> 1.0.0)
+  - ModelMapper (1.0.1)
 
 DEPENDENCIES:
   - Google/SignIn
+  - ModelMapper
 
 SPEC CHECKSUMS:
   Google: 97618e118111b998cce1d8dd1bd98b82301d72db
@@ -37,5 +39,6 @@ SPEC CHECKSUMS:
   GoogleSignIn: 79929b51e6299c69f1197bbd9c7a1367d523ecd8
   GoogleSymbolUtilities: 82ad9f93d3615244b3f4ce440f5ab2515e8b4f56
   GoogleUtilities: 8ed9134debe11719097881711464752900668f10
+  ModelMapper: 724dba38a40af2f23b6512a3e729ac7f5a7fde5c
 
 COCOAPODS: 0.39.0

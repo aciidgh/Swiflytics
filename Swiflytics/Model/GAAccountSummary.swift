@@ -7,59 +7,87 @@
 //
 
 import UIKit
+import Mapper
 
-struct GAAccountSummary {
+struct GAAccountSummary: Mappable {
     let id: String
     let name: String
-    let views: [GAPropertyView]
+    let properties: [GAProperty]
     
-    init(jsonDict: NSDictionary) {
-        id = jsonDict["id"] as! String
-        name = jsonDict["name"] as! String
+    var allProfiles: [GAPropertyProfile] {
+        var profiles = [GAPropertyProfile]()
         
-        var views = [GAPropertyView]()
-        
-        for property in jsonDict["webProperties"] as! NSArray {
-            views.appendContentsOf(GAPropertyView.summaryFromPropertyDict(property as! NSDictionary))
+        for property in self.properties {
+            for profile in property.profiles {
+                let propertyProfile = GAPropertyProfile(propertyID: property.id, propertyName: property.name, profileID: profile.id, profileName: profile.name, profileType: profile.type)
+                profiles.append(propertyProfile)
+            }
         }
-        
-        self.views = views
+        return profiles
     }
     
-    static func summaryFromArray(jsonArray: NSArray) -> [GAAccountSummary] {
-        var array = [GAAccountSummary]()
+    init(map: Mapper) throws {
+        try id = map.from("id")
+        try name = map.from("name")
+        try properties = map.from("webProperties")
+    }
+    
+    static func fetchSummary(clientID: String, accessToken: String, completion: ([GAAccountSummary]) -> () ) {
+        let url = "https://www.googleapis.com/analytics/v3/management/accountSummaries?key=\(clientID)&access_token=\(accessToken)"
         
-        for json in jsonArray {
-            array.append(GAAccountSummary(jsonDict: json as! NSDictionary))
-        }
-        
-        return array
+        NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: url)!) { (data, response, error) -> Void in
+            guard let data = data else { return }
+            
+            var result = [GAAccountSummary]()
+            
+            if let json = try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)["items"] as? NSArray, let jsonUnWrapped = json {
+                
+                for case let jsonObject as NSDictionary in jsonUnWrapped {
+                    guard let summary = GAAccountSummary.from(jsonObject) else { continue }
+                    result.append(summary)
+                }
+            }
+            
+            onMainThread {
+                completion(result)
+            }
+        }.resume()
     }
 }
 
-enum GAPropertyViewType : String {
+enum GAProfileSummaryType: String {
     case App = "APP"
     case Web = "WEB"
 }
 
-struct GAPropertyView {
+struct GAPropertyProfile {
     let propertyID: String
     let propertyName: String
-    let viewName: String
-    let viewID: String
-    let viewType: GAPropertyViewType
+    let profileID: String
+    let profileName: String
+    let profileType: GAProfileSummaryType
+}
+
+struct GAProfileSummary: Mappable {
+    let id: String
+    let name: String
+    let type: GAProfileSummaryType
     
-    static func summaryFromPropertyDict(jsonObject: NSDictionary) -> [GAPropertyView] {
-        
-        let propertyID = jsonObject["id"] as! String
-        let propertyName = jsonObject["name"] as! String
-        
-        var array = [GAPropertyView]()
-        
-        for viewDict in jsonObject["profiles"] as! NSArray {
-            let view = GAPropertyView(propertyID: propertyID, propertyName: propertyName, viewName: viewDict["name"] as! String, viewID: viewDict["id"] as! String, viewType: GAPropertyViewType(rawValue: viewDict["type"] as! String)!)
-            array.append(view)
-        }
-        return array
+    init(map: Mapper) throws {
+        try id = map.from("id")
+        try name = map.from("name")
+        try type = map.from("type")
+    }
+}
+
+struct GAProperty: Mappable {
+    let id: String
+    let name: String
+    let profiles: [GAProfileSummary]
+   
+    init(map: Mapper) throws {
+        try id = map.from("id")
+        try name = map.from("name")
+        try profiles = map.from("profiles")
     }
 }

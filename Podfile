@@ -6,6 +6,7 @@ use_frameworks!
 target 'Swiflytics' do
 
 pod 'Google/SignIn'
+pod "ModelMapper"
 
 end
 
