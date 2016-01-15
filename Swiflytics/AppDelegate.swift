@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
 
+
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         // Initialize google sign-in
@@ -27,6 +28,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             GIDSignIn.sharedInstance().scopes.append(kGoogleAnalyticsScope)
         }()
 
+        window = UIWindow()
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+        GIDSignIn.sharedInstance().signInSilently()
+
+        let firstVC: UIViewController? = GIDSignIn.sharedInstance().hasAuthInKeychain() ? HomeViewController.instance(storyboard) : LoginViewController.instance(storyboard)
+
+        window?.rootViewController = firstVC
+        window?.makeKeyAndVisible()
 
         return true
     }

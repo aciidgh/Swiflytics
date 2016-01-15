@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		2B5ACAFBC2DE97AF30B8A649 /* Pods_Swiflytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB8564F5041A3E3B11DE65F /* Pods_Swiflytics.framework */; };
 		BCD38D581C48D6CD009B1B8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD38D571C48D6CD009B1B8B /* AppDelegate.swift */; };
-		BCD38D5A1C48D6CD009B1B8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD38D591C48D6CD009B1B8B /* LoginViewController.swift */; };
 		BCD38D5D1C48D6CD009B1B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD38D5B1C48D6CD009B1B8B /* Main.storyboard */; };
 		BCD38D5F1C48D6CD009B1B8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD38D5E1C48D6CD009B1B8B /* Assets.xcassets */; };
 		BCD38D621C48D6CD009B1B8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD38D601C48D6CD009B1B8B /* LaunchScreen.storyboard */; };
 		BCD38D6A1C48DEE2009B1B8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCD38D691C48DEE2009B1B8B /* GoogleService-Info.plist */; };
+		BCD38D731C49198B009B1B8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD38D721C49198B009B1B8B /* LoginViewController.swift */; };
+		BCD38D761C491A1C009B1B8B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD38D751C491A1C009B1B8B /* HomeViewController.swift */; };
+		BCD38D781C491A42009B1B8B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD38D771C491A42009B1B8B /* Utils.swift */; };
+		BCD38D7A1C491A4C009B1B8B /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD38D791C491A4C009B1B8B /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +25,16 @@
 		7FB8564F5041A3E3B11DE65F /* Pods_Swiflytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiflytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD38D541C48D6CD009B1B8B /* Swiflytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiflytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD38D571C48D6CD009B1B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BCD38D591C48D6CD009B1B8B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BCD38D5C1C48D6CD009B1B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCD38D5E1C48D6CD009B1B8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCD38D611C48D6CD009B1B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCD38D631C48D6CD009B1B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCD38D691C48DEE2009B1B8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCD38D6B1C48DF5B009B1B8B /* Swiflytics-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swiflytics-Bridging-Header.h"; sourceTree = "<group>"; };
+		BCD38D721C49198B009B1B8B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BCD38D751C491A1C009B1B8B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BCD38D771C491A42009B1B8B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		BCD38D791C491A4C009B1B8B /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +78,10 @@
 		BCD38D561C48D6CD009B1B8B /* Swiflytics */ = {
 			isa = PBXGroup;
 			children = (
+				BCD38D6F1C491975009B1B8B /* Controller */,
+				BCD38D701C491975009B1B8B /* Model */,
+				BCD38D711C491975009B1B8B /* View */,
 				BCD38D571C48D6CD009B1B8B /* AppDelegate.swift */,
-				BCD38D591C48D6CD009B1B8B /* LoginViewController.swift */,
 				BCD38D5B1C48D6CD009B1B8B /* Main.storyboard */,
 				BCD38D5E1C48D6CD009B1B8B /* Assets.xcassets */,
 				BCD38D601C48D6CD009B1B8B /* LaunchScreen.storyboard */,
@@ -82,6 +90,31 @@
 				BCD38D6B1C48DF5B009B1B8B /* Swiflytics-Bridging-Header.h */,
 			);
 			path = Swiflytics;
+			sourceTree = "<group>";
+		};
+		BCD38D6F1C491975009B1B8B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BCD38D721C49198B009B1B8B /* LoginViewController.swift */,
+				BCD38D751C491A1C009B1B8B /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BCD38D701C491975009B1B8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCD38D771C491A42009B1B8B /* Utils.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCD38D711C491975009B1B8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCD38D791C491A4C009B1B8B /* HomeTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CDBBFE27CA01C81A13020261 /* Pods */ = {
@@ -216,8 +249,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCD38D5A1C48D6CD009B1B8B /* LoginViewController.swift in Sources */,
+				BCD38D731C49198B009B1B8B /* LoginViewController.swift in Sources */,
 				BCD38D581C48D6CD009B1B8B /* AppDelegate.swift in Sources */,
+				BCD38D761C491A1C009B1B8B /* HomeViewController.swift in Sources */,
+				BCD38D781C491A42009B1B8B /* Utils.swift in Sources */,
+				BCD38D7A1C491A4C009B1B8B /* HomeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

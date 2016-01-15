@@ -8,8 +8,9 @@
 
 import UIKit
 
-@objc class LoginViewController: UIViewController, GIDSignInUIDelegate {
-
+@objc final class LoginViewController: UIViewController, GIDSignInUIDelegate, StoryboardInstantiable {
+    typealias ViewController = LoginViewController
+    static let storyboardID = "LoginViewControllerID"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +32,14 @@ import UIKit
             return
         }
 
-        guard let user = GIDSignIn.sharedInstance().currentUser else {
+        guard let _ = GIDSignIn.sharedInstance().currentUser else {
             print("Auth failed")
             return
         }
-        print("auth success \(user)")
+
+        UIView.transitionWithView(self.view.window!, duration: 0.5, options: UIViewAnimationOptions.TransitionFlipFromLeft, animations: { () -> Void in
+            self.view.window?.rootViewController = HomeViewController.instance(self.storyboard!)
+            }, completion: nil)
     }
 }
 
