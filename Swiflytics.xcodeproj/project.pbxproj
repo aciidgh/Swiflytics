@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B5ACAFBC2DE97AF30B8A649 /* Pods_Swiflytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB8564F5041A3E3B11DE65F /* Pods_Swiflytics.framework */; };
+		547263331C495C2A00B7EEE9 /* GAAccountSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547263321C495C2A00B7EEE9 /* GAAccountSummary.swift */; };
 		BCD38D581C48D6CD009B1B8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD38D571C48D6CD009B1B8B /* AppDelegate.swift */; };
 		BCD38D5D1C48D6CD009B1B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD38D5B1C48D6CD009B1B8B /* Main.storyboard */; };
 		BCD38D5F1C48D6CD009B1B8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD38D5E1C48D6CD009B1B8B /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		2D6281B1508A15FFC0DE619E /* Pods-Swiflytics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiflytics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swiflytics/Pods-Swiflytics.debug.xcconfig"; sourceTree = "<group>"; };
 		53214255994618A90542546F /* Pods-Swiflytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiflytics.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swiflytics/Pods-Swiflytics.release.xcconfig"; sourceTree = "<group>"; };
+		547263321C495C2A00B7EEE9 /* GAAccountSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GAAccountSummary.swift; sourceTree = "<group>"; };
 		7FB8564F5041A3E3B11DE65F /* Pods_Swiflytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiflytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD38D541C48D6CD009B1B8B /* Swiflytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiflytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD38D571C48D6CD009B1B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				BCD38D771C491A42009B1B8B /* Utils.swift */,
+				547263321C495C2A00B7EEE9 /* GAAccountSummary.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				BCD38D731C49198B009B1B8B /* LoginViewController.swift in Sources */,
 				BCD38D581C48D6CD009B1B8B /* AppDelegate.swift in Sources */,
+				547263331C495C2A00B7EEE9 /* GAAccountSummary.swift in Sources */,
 				BCD38D761C491A1C009B1B8B /* HomeViewController.swift in Sources */,
 				BCD38D781C491A42009B1B8B /* Utils.swift in Sources */,
 				BCD38D7A1C491A4C009B1B8B /* HomeTableViewCell.swift in Sources */,
@@ -366,6 +370,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Swiflytics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = im.ankit.Swiflytics;
@@ -381,6 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Swiflytics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = im.ankit.Swiflytics;

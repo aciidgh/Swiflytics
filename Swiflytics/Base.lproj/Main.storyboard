@@ -164,6 +164,11 @@
                                                 <constraint firstItem="rJi-GI-aL3" firstAttribute="leading" secondItem="ywO-7Q-fdu" secondAttribute="leading" id="yVM-Tx-deb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="iconImageView" destination="6m3-Ru-ccZ" id="fFa-6X-dTK"/>
+                                            <outlet property="mainTitle" destination="n8f-5E-Wun" id="ACN-oK-7sE"/>
+                                            <outlet property="subTitle" destination="tk4-Kw-rKb" id="DFu-t5-9Ta"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

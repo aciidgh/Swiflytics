@@ -9,5 +9,8 @@
 import UIKit
 
 class HomeTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet var iconImageView: UIImageView!
+    @IBOutlet var mainTitle: UILabel!
+    @IBOutlet var subTitle: UILabel!
 }
