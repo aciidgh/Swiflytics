@@ -1,0 +1,291 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BCD38D581C48D6CD009B1B8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD38D571C48D6CD009B1B8B /* AppDelegate.swift */; };
+		BCD38D5A1C48D6CD009B1B8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD38D591C48D6CD009B1B8B /* ViewController.swift */; };
+		BCD38D5D1C48D6CD009B1B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD38D5B1C48D6CD009B1B8B /* Main.storyboard */; };
+		BCD38D5F1C48D6CD009B1B8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD38D5E1C48D6CD009B1B8B /* Assets.xcassets */; };
+		BCD38D621C48D6CD009B1B8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD38D601C48D6CD009B1B8B /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BCD38D541C48D6CD009B1B8B /* Swiflytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiflytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCD38D571C48D6CD009B1B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BCD38D591C48D6CD009B1B8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BCD38D5C1C48D6CD009B1B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BCD38D5E1C48D6CD009B1B8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BCD38D611C48D6CD009B1B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BCD38D631C48D6CD009B1B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCD38D511C48D6CD009B1B8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BCD38D4B1C48D6CD009B1B8B = {
+			isa = PBXGroup;
+			children = (
+				BCD38D561C48D6CD009B1B8B /* Swiflytics */,
+				BCD38D551C48D6CD009B1B8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BCD38D551C48D6CD009B1B8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCD38D541C48D6CD009B1B8B /* Swiflytics.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCD38D561C48D6CD009B1B8B /* Swiflytics */ = {
+			isa = PBXGroup;
+			children = (
+				BCD38D571C48D6CD009B1B8B /* AppDelegate.swift */,
+				BCD38D591C48D6CD009B1B8B /* ViewController.swift */,
+				BCD38D5B1C48D6CD009B1B8B /* Main.storyboard */,
+				BCD38D5E1C48D6CD009B1B8B /* Assets.xcassets */,
+				BCD38D601C48D6CD009B1B8B /* LaunchScreen.storyboard */,
+				BCD38D631C48D6CD009B1B8B /* Info.plist */,
+			);
+			path = Swiflytics;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCD38D531C48D6CD009B1B8B /* Swiflytics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCD38D661C48D6CD009B1B8B /* Build configuration list for PBXNativeTarget "Swiflytics" */;
+			buildPhases = (
+				BCD38D501C48D6CD009B1B8B /* Sources */,
+				BCD38D511C48D6CD009B1B8B /* Frameworks */,
+				BCD38D521C48D6CD009B1B8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Swiflytics;
+			productName = Swiflytics;
+			productReference = BCD38D541C48D6CD009B1B8B /* Swiflytics.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCD38D4C1C48D6CD009B1B8B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = ankit.im;
+				TargetAttributes = {
+					BCD38D531C48D6CD009B1B8B = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = BCD38D4F1C48D6CD009B1B8B /* Build configuration list for PBXProject "Swiflytics" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BCD38D4B1C48D6CD009B1B8B;
+			productRefGroup = BCD38D551C48D6CD009B1B8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCD38D531C48D6CD009B1B8B /* Swiflytics */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCD38D521C48D6CD009B1B8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCD38D621C48D6CD009B1B8B /* LaunchScreen.storyboard in Resources */,
+				BCD38D5F1C48D6CD009B1B8B /* Assets.xcassets in Resources */,
+				BCD38D5D1C48D6CD009B1B8B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCD38D501C48D6CD009B1B8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCD38D5A1C48D6CD009B1B8B /* ViewController.swift in Sources */,
+				BCD38D581C48D6CD009B1B8B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BCD38D5B1C48D6CD009B1B8B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCD38D5C1C48D6CD009B1B8B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BCD38D601C48D6CD009B1B8B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCD38D611C48D6CD009B1B8B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BCD38D641C48D6CD009B1B8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BCD38D651C48D6CD009B1B8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCD38D671C48D6CD009B1B8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Swiflytics/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = im.ankit.Swiflytics;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BCD38D681C48D6CD009B1B8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Swiflytics/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = im.ankit.Swiflytics;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCD38D4F1C48D6CD009B1B8B /* Build configuration list for PBXProject "Swiflytics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCD38D641C48D6CD009B1B8B /* Debug */,
+				BCD38D651C48D6CD009B1B8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCD38D661C48D6CD009B1B8B /* Build configuration list for PBXNativeTarget "Swiflytics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCD38D671C48D6CD009B1B8B /* Debug */,
+				BCD38D681C48D6CD009B1B8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCD38D4C1C48D6CD009B1B8B /* Project object */;
+}
