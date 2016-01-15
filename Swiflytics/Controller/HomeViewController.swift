@@ -52,9 +52,7 @@ final class HomeViewController: UIViewController, StoryboardInstantiable {
         let accessToken = GIDSignIn.sharedInstance().currentUser.authentication.accessToken
         GAAccountSummary.fetchSummary(clientID, accessToken: accessToken) {
             self.accountSummary = $0
-            onMainThread {
-                completion()
-            }
+            completion()
         }
     }
     
