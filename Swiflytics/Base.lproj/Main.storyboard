@@ -209,6 +209,24 @@
             </objects>
             <point key="canvasLocation" x="2085" y="337"/>
         </scene>
+        <!--Analytics View Controller-->
+        <scene sceneID="p67-TE-isq">
+            <objects>
+                <viewController storyboardIdentifier="AnalyticsViewControllerID" id="k4A-sR-CZO" customClass="AnalyticsViewController" customModule="Swiflytics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ahf-CL-AKC"/>
+                        <viewControllerLayoutGuide type="bottom" id="1sR-zi-q4E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uTY-eX-mkA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8NQ-ZB-X2s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2837" y="337"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zvv-Eb-kxe">
             <objects>
@@ -217,6 +235,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OFm-2f-h1l">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.29019607843137252" green="0.63921568627450975" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

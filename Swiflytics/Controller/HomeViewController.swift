@@ -8,12 +8,11 @@
 
 import UIKit
 
-final class HomeViewController: UIViewController, StoryboardInstantiable {
+class HomeViewController: UIViewController, StoryboardInstantiable {
 
     typealias ViewController = UINavigationController
-
     static let storyboardID = "HomeViewControllerID"
-
+    
     @IBOutlet var tableView: UITableView!
     
     var accountSummary = [GAAccountSummary]()
@@ -43,8 +42,7 @@ final class HomeViewController: UIViewController, StoryboardInstantiable {
         
         fetchData {
             self.tableView.reloadData()
-        }
-      
+        } 
     }
 
     func fetchData(completion: ()->()) {
@@ -108,5 +106,9 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let profile = accountSummary[indexPath.section].allProfiles[indexPath.row]
+        let analyticsVC = AnalyticsViewController.instance(storyboard!)!
+        analyticsVC.profile = profile
+        navigationController?.pushViewController(analyticsVC, animated: true)
     }
 }

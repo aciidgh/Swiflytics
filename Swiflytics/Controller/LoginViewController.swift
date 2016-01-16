@@ -8,10 +8,10 @@
 
 import UIKit
 
-@objc final class LoginViewController: UIViewController, GIDSignInUIDelegate, StoryboardInstantiable {
+@objc class LoginViewController: UIViewController, GIDSignInUIDelegate, StoryboardInstantiable {
     typealias ViewController = LoginViewController
     static let storyboardID = "LoginViewControllerID"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance().uiDelegate = self
@@ -42,4 +42,3 @@ import UIKit
             }, completion: nil)
     }
 }
-
