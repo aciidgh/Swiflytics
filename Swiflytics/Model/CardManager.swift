@@ -32,6 +32,7 @@ class CardManager {
     }
     
     func allCards() -> [AnalyticsCard] {
+        cards = cards.count == 0 ? AnalyticsCard.defaultCards() : cards
         return cards
     }
     
