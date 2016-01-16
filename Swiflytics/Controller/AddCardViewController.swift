@@ -17,14 +17,6 @@ class AddCardViewController: UIViewController, StoryboardInstantiable {
     @IBOutlet var metricButton: UIButton!
     @IBOutlet var cardNameField: UITextField!
     
-//    var card: AnalyticsCard? {
-//        didSet {
-//            self.metric = card?.metric
-//            self.dimension = card?.dimension
-//            self.cardNameField.text = card?.cardName
-//        }
-//    }
-    
     var metric: AnalyticsMetric? {
         didSet {
             self.updateView()
@@ -55,7 +47,7 @@ class AddCardViewController: UIViewController, StoryboardInstantiable {
             self.metricButton.titleLabel?.text = metric.rawValue
         }
     }
-    
+
     @IBAction func dimensionButtonPressed(sender: AnyObject?) {
         let controller = UIAlertController(title: "Select Dimension", message: "", preferredStyle: UIAlertControllerStyle.ActionSheet)
         
@@ -86,7 +78,6 @@ class AddCardViewController: UIViewController, StoryboardInstantiable {
         controller.addAction(cancelAction)
         
         presentViewController(controller, animated: true, completion: nil)
-
     }
     
     @IBAction func saveButtonPressed(sender: AnyObject?) {

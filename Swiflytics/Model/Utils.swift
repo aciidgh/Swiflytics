@@ -9,7 +9,7 @@
 protocol StoryboardInstantiable {
     typealias ViewController
     static var storyboardID: String { get }
-    static func instance(storyboard: UIStoryboard) ->ViewController?
+    static func instance(storyboard: UIStoryboard) -> ViewController?
 }
 
 extension StoryboardInstantiable {
@@ -24,9 +24,9 @@ func onMainThread(closure: () -> ()) {
     })
 }
 
-func showAlertWithText(text: String, onViewController vc: UIViewController) {
+func showAlertWithText(text: String, onViewController vc: UIViewController, completion: (() -> Void)? = nil) {
     let controller = UIAlertController(title: "Oops", message: text, preferredStyle: UIAlertControllerStyle.Alert)
     let cancelAction = UIAlertAction(title: "Okay", style: .Cancel, handler: nil)
     controller.addAction(cancelAction)
-    vc.presentViewController(controller, animated: true, completion: nil)
+    vc.presentViewController(controller, animated: true, completion: completion)
 }

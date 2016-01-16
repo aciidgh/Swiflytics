@@ -47,7 +47,6 @@ class AnalyticsCardCollectionViewCell: UICollectionViewCell {
     }
     
     override func layoutSubviews() {
-        
         addCornerRadiusToContainer()
         super.layoutSubviews()
     }

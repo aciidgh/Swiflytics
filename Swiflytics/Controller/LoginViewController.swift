@@ -38,7 +38,11 @@ import UIKit
         }
 
         UIView.transitionWithView(self.view.window!, duration: 0.5, options: UIViewAnimationOptions.TransitionFlipFromLeft, animations: { () -> Void in
-            self.view.window?.rootViewController = HomeViewController.instance(self.storyboard!)
+            let vc = HomeViewController.instance(self.storyboard!)
+            let homeVC = vc?.topViewController as? HomeViewController
+            homeVC?.loggedIn = true
+            homeVC?.refreshPressed()
+            self.view.window?.rootViewController = vc
             }, completion: nil)
     }
 }

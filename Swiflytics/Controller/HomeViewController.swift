@@ -44,9 +44,7 @@ class HomeViewController: UIViewController, StoryboardInstantiable {
         
         loggedIn = true
         
-        fetchData {
-            self.tableView.reloadData()
-        } 
+        refreshPressed()
     }
 
     func fetchData(completion: ()->()) {

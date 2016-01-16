@@ -17,10 +17,14 @@ class AnalyticsViewController: UIViewController, StoryboardInstantiable {
     let clientID = GIDSignIn.sharedInstance().clientID
     let accessToken = GIDSignIn.sharedInstance().currentUser.authentication.accessToken
     
+    var gaAnalytics = [Int: GAAnalytics]()
+    
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var activeUsersLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Real Time"
         
         cards = CardManager.sharedManager.allCards()
         collectionView.reloadData()
@@ -40,8 +44,37 @@ class AnalyticsViewController: UIViewController, StoryboardInstantiable {
     }
     
     func refreshPressed(sender: AnyObject?) {
+        gaAnalytics = [Int: GAAnalytics]()
         cards = CardManager.sharedManager.allCards()
         collectionView.reloadData()
+        
+        fetchTotalOnlineUsers {
+            self.activeUsersLabel.text = $0
+        }
+    }
+    
+    func fetchTotalOnlineUsers(completion: (String)->()) {
+        
+        let url = kRealtimeAnalyticsBaseURL + "ids=ga:\(profile.profileID)"
+            + "&metrics=\(AnalyticsMetric.ActiveUsers.rawValue)"
+            + "&key=\(clientID)"
+            + "&access_token=\(accessToken)"
+            + "&fields=totalsForAllResults"
+        
+        var onlineUsers = "0"
+        
+        NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: url)!) { (data, response, error) -> Void in
+            
+            guard let data = data else { return }
+            
+            if let json = try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments) as? NSDictionary,
+                let jsonUnWrapped = json,
+                let totalResults = jsonUnWrapped["totalsForAllResults"] as? NSDictionary {
+                
+                onlineUsers = (totalResults[AnalyticsMetric.ActiveUsers.rawValue] as! String)
+            }
+            onMainThread { completion(onlineUsers) }
+        }.resume()
     }
 }
 
@@ -66,9 +99,14 @@ extension AnalyticsViewController: UICollectionViewDataSource {
         cell.cardTitle.text = card.cardName
         cell.layoutIfNeeded()
         
-        card.fetchData(profile.profileID, clientID: clientID, accessToken: accessToken) { gaAnalytics in
-            if card == cell.card {
-                cell.gaAnalytics = gaAnalytics
+        cell.gaAnalytics = gaAnalytics[indexPath.row]
+        
+        if gaAnalytics[indexPath.row] == nil {
+            card.fetchData(profile.profileID, clientID: clientID, accessToken: accessToken) { gaAnalytics in
+                if card == cell.card {
+                    self.gaAnalytics[indexPath.row] = gaAnalytics
+                    cell.gaAnalytics = gaAnalytics
+                }
             }
         }
         
@@ -91,7 +129,7 @@ extension AnalyticsViewController:  UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSizeMake(UIScreen.mainScreen().bounds.size.width, 77)
+        return CGSizeMake(UIScreen.mainScreen().bounds.size.width, 77 + 16)
     }
 }
 

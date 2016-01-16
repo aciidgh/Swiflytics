@@ -30,12 +30,35 @@ enum AnalyticsMetric: String, EnumCollectable {
 }
 
 enum AnalyticsDimension: String, EnumCollectable {
-    case Country = "rt:country"
+    
     case PagePath = "rt:pagePath"
     case PageTitle = "rt:pageTitle"
     
+    case ReferralPath = "rt:referralPath"
+    case Campaign = "rt:campaign"
+    case Source = "rt:source"
+    case Medium = "rt:medium"
+    case TrafficType = "rt:trafficType"
+    case Keyword = "rt:keyword"
+    
+    case Browser = "rt:browser"
+    case BrowserVersion = "rt:browserVersion"
+    case OperatingSystem = "rt:operatingSystem"
+    case OperatingSystemVersion = "rt:operatingSystemVersion"
+    case DeviceCategory = "rt:deviceCategory"
+    case MobileDeviceBranding = "rt:mobileDeviceBranding"
+    case MobileDeviceModel = "rt:mobileDeviceModel"
+    
+    case Country = "rt:country"
+    case Region = "rt:region"
+    case City = "rt:city"
+    
     static func allValues() -> [AnalyticsDimension] {
-        return [.Country, .PagePath, .PageTitle]
+        return [.PagePath, .PageTitle,
+                .ReferralPath, .Campaign, .Source, .Medium, .TrafficType, .Keyword,
+                .Browser, .BrowserVersion, .OperatingSystem, .OperatingSystemVersion, .DeviceCategory, .MobileDeviceBranding, .MobileDeviceModel,
+                .Country, .Region, .City,
+                ]
     }
     
     var stringValue: String {
@@ -112,7 +135,12 @@ struct AnalyticsCard: Equatable, Mappable {
     }
     
     /// Shit but works for now
-    func parseJSON(json: NSDictionary) -> GAAnalytics {
+    func parseJSON(json: NSDictionary) -> GAAnalytics? {
+        
+        if let error = json["error"] {
+            print(error)
+            return nil
+        }
         
         var tuple: (AnalyticsDimension, AnalyticsMetric, [String], [String]) = (.Country, .Pageviews, [String](), [String]())
         

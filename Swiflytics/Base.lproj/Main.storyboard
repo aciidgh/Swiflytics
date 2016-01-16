@@ -210,10 +210,10 @@
             </objects>
             <point key="canvasLocation" x="2085" y="337"/>
         </scene>
-        <!--Analytics View Controller-->
+        <!--Real Time-->
         <scene sceneID="p67-TE-isq">
             <objects>
-                <viewController storyboardIdentifier="AnalyticsViewControllerID" id="k4A-sR-CZO" customClass="AnalyticsViewController" customModule="Swiflytics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AnalyticsViewControllerID" title="Real Time" id="k4A-sR-CZO" customClass="AnalyticsViewController" customModule="Swiflytics" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ahf-CL-AKC"/>
                         <viewControllerLayoutGuide type="bottom" id="1sR-zi-q4E"/>
@@ -223,15 +223,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaN-Ut-Gp8">
-                                <rect key="frame" x="0.0" y="64" width="0.0" height="0.0"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="122"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaH-pe-SCa">
+                                        <rect key="frame" x="284.5" y="30" width="32" height="62.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                        <color key="textColor" red="0.2901960784" green="0.63921568630000003" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" id="7Ba-aV-h7M"/>
-                                    <constraint firstAttribute="width" id="ghl-Qx-dKY"/>
+                                    <constraint firstAttribute="height" constant="122" id="7Ba-aV-h7M"/>
+                                    <constraint firstItem="YaH-pe-SCa" firstAttribute="centerY" secondItem="uaN-Ut-Gp8" secondAttribute="centerY" id="We0-bs-Nwh"/>
+                                    <constraint firstItem="YaH-pe-SCa" firstAttribute="centerX" secondItem="uaN-Ut-Gp8" secondAttribute="centerX" id="uN2-VS-E4Z"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Eyb-S2-Cuw">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="186" width="600" height="414"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="RaA-TS-3v4">
                                     <size key="itemSize" width="495" height="176"/>
@@ -266,7 +275,7 @@
                                                     </constraints>
                                                 </view>
                                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C5j-XU-lGj">
-                                                    <rect key="frame" x="0.0" y="39.5" width="495" height="132.5"/>
+                                                    <rect key="frame" x="0.0" y="39" width="495" height="132.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <prototypes>
                                                         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnalyticsCardDataTableViewCell" rowHeight="26" id="Abn-cR-bm6" customClass="AnalyticsCardDataTableViewCell" customModule="Swiflytics" customModuleProvider="target">
@@ -375,16 +384,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Eyb-S2-Cuw" firstAttribute="top" secondItem="uaN-Ut-Gp8" secondAttribute="bottom" id="6Bp-lc-yHA"/>
                             <constraint firstItem="uaN-Ut-Gp8" firstAttribute="leading" secondItem="uTY-eX-mkA" secondAttribute="leading" id="Ces-ji-dpb"/>
                             <constraint firstItem="Eyb-S2-Cuw" firstAttribute="leading" secondItem="uTY-eX-mkA" secondAttribute="leading" id="HQa-tM-LKA"/>
                             <constraint firstAttribute="trailing" secondItem="Eyb-S2-Cuw" secondAttribute="trailing" id="NWK-ne-dxh"/>
                             <constraint firstItem="1sR-zi-q4E" firstAttribute="top" secondItem="Eyb-S2-Cuw" secondAttribute="bottom" id="Nxx-eb-FyC"/>
-                            <constraint firstItem="Eyb-S2-Cuw" firstAttribute="top" secondItem="Ahf-CL-AKC" secondAttribute="bottom" id="j18-Ss-BiH"/>
+                            <constraint firstAttribute="trailing" secondItem="uaN-Ut-Gp8" secondAttribute="trailing" id="iPo-bQ-1JI"/>
                             <constraint firstItem="uaN-Ut-Gp8" firstAttribute="top" secondItem="Ahf-CL-AKC" secondAttribute="bottom" id="sk3-ta-rHu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Yh7-CS-ssk"/>
                     <connections>
+                        <outlet property="activeUsersLabel" destination="YaH-pe-SCa" id="Th0-05-BZo"/>
                         <outlet property="collectionView" destination="Eyb-S2-Cuw" id="DV4-6R-keE"/>
                         <segue destination="fVE-ck-k0B" kind="show" id="mhp-FU-gRm"/>
                     </connections>
