@@ -16,7 +16,8 @@ class HomeViewController: UIViewController, StoryboardInstantiable {
     @IBOutlet var tableView: UITableView!
     
     var accountSummary = [GAAccountSummary]()
-
+    var loggedIn = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Swiflytics"
@@ -37,8 +38,11 @@ class HomeViewController: UIViewController, StoryboardInstantiable {
         
         guard let _ = GIDSignIn.sharedInstance().currentUser else {
             print("Auth failed")
+            logoutPressed()
             return
         }
+        
+        loggedIn = true
         
         fetchData {
             self.tableView.reloadData()
@@ -46,6 +50,12 @@ class HomeViewController: UIViewController, StoryboardInstantiable {
     }
 
     func fetchData(completion: ()->()) {
+        
+        guard loggedIn else {
+            showAlertWithText("Please wait while we're authenticating", onViewController: self);
+            return
+        }
+        
         let clientID = GIDSignIn.sharedInstance().clientID
         let accessToken = GIDSignIn.sharedInstance().currentUser.authentication.accessToken
         GAAccountSummary.fetchSummary(clientID, accessToken: accessToken) {
@@ -65,7 +75,6 @@ class HomeViewController: UIViewController, StoryboardInstantiable {
         fetchData {
             self.tableView.reloadData()
         }
-
     }
 }
 

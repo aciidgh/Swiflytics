@@ -20,5 +20,3 @@ struct GAAnalytics {
         return dimensionValues.count
     }
 }
-
-

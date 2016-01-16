@@ -23,3 +23,10 @@ func onMainThread(closure: () -> ()) {
         closure()
     })
 }
+
+func showAlertWithText(text: String, onViewController vc: UIViewController) {
+    let controller = UIAlertController(title: "Oops", message: text, preferredStyle: UIAlertControllerStyle.Alert)
+    let cancelAction = UIAlertAction(title: "Okay", style: .Cancel, handler: nil)
+    controller.addAction(cancelAction)
+    vc.presentViewController(controller, animated: true, completion: nil)
+}

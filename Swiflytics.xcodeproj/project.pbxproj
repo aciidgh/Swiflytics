@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2B5ACAFBC2DE97AF30B8A649 /* Pods_Swiflytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB8564F5041A3E3B11DE65F /* Pods_Swiflytics.framework */; };
+		545F21A81C4A76B300C57A60 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F21A71C4A76B300C57A60 /* AddCardViewController.swift */; };
+		545F21AA1C4A89CD00C57A60 /* CardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F21A91C4A89CD00C57A60 /* CardManager.swift */; };
 		547263331C495C2A00B7EEE9 /* GAAccountSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547263321C495C2A00B7EEE9 /* GAAccountSummary.swift */; };
 		54A474B11C4A2AE800A90736 /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A474B01C4A2AE800A90736 /* AnalyticsViewController.swift */; };
 		54A474B31C4A2D7300A90736 /* AnalyticsCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A474B21C4A2D7300A90736 /* AnalyticsCardCollectionViewCell.swift */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		2D6281B1508A15FFC0DE619E /* Pods-Swiflytics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiflytics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swiflytics/Pods-Swiflytics.debug.xcconfig"; sourceTree = "<group>"; };
 		53214255994618A90542546F /* Pods-Swiflytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiflytics.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swiflytics/Pods-Swiflytics.release.xcconfig"; sourceTree = "<group>"; };
+		545F21A71C4A76B300C57A60 /* AddCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
+		545F21A91C4A89CD00C57A60 /* CardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardManager.swift; sourceTree = "<group>"; };
 		547263321C495C2A00B7EEE9 /* GAAccountSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GAAccountSummary.swift; sourceTree = "<group>"; };
 		54A474B01C4A2AE800A90736 /* AnalyticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
 		54A474B21C4A2D7300A90736 /* AnalyticsCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsCardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 				BCD38D721C49198B009B1B8B /* LoginViewController.swift */,
 				BCD38D751C491A1C009B1B8B /* HomeViewController.swift */,
 				54A474B01C4A2AE800A90736 /* AnalyticsViewController.swift */,
+				545F21A71C4A76B300C57A60 /* AddCardViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 				547263321C495C2A00B7EEE9 /* GAAccountSummary.swift */,
 				54A474B41C4A2DF100A90736 /* GAAnalytics.swift */,
 				54A474B61C4A2F1E00A90736 /* AnalyticsCard.swift */,
+				545F21A91C4A89CD00C57A60 /* CardManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,9 +281,11 @@
 				54A474B11C4A2AE800A90736 /* AnalyticsViewController.swift in Sources */,
 				54A474B91C4A49D600A90736 /* AnalyticsCardDataTableViewCell.swift in Sources */,
 				547263331C495C2A00B7EEE9 /* GAAccountSummary.swift in Sources */,
+				545F21A81C4A76B300C57A60 /* AddCardViewController.swift in Sources */,
 				BCD38D761C491A1C009B1B8B /* HomeViewController.swift in Sources */,
 				BCD38D781C491A42009B1B8B /* Utils.swift in Sources */,
 				BCD38D7A1C491A4C009B1B8B /* HomeTableViewCell.swift in Sources */,
+				545F21AA1C4A89CD00C57A60 /* CardManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

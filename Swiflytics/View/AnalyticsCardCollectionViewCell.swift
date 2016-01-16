@@ -17,16 +17,28 @@ extension UIView {
     }
 }
 
+protocol AnalyticsCardDelegate: NSObjectProtocol {
+    func didRemoveCard()
+}
+
 class AnalyticsCardCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var cardTitle: UILabel!
     @IBOutlet var cardTitleContainer: UIView!
     @IBOutlet var dataTableView: UITableView!
     
+    var card: AnalyticsCard!
+    weak var delegate: AnalyticsCardDelegate?
+    
     var gaAnalytics: GAAnalytics? {
         didSet {
             self.dataTableView.reloadData()
         }
+    }
+    
+    @IBAction func removeCard(sender: AnyObject) {
+        CardManager.sharedManager.removeCard(card)
+        delegate?.didRemoveCard()
     }
     
     override func awakeFromNib() {
