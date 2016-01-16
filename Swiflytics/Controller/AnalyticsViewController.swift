@@ -24,6 +24,14 @@ class AnalyticsViewController: UIViewController, StoryboardInstantiable {
         
         cards = AnalyticsCard.defaultCards()
         collectionView.reloadData()
+        
+        let refreshBtn = UIBarButtonItem(title: "Refresh", style: UIBarButtonItemStyle.Plain, target: self, action: "refreshPressed:")
+        self.navigationItem.rightBarButtonItem = refreshBtn
+    }
+    
+    func refreshPressed(sender: AnyObject?) {
+        cards = AnalyticsCard.defaultCards()
+        collectionView.reloadData()
     }
 }
 
@@ -41,9 +49,7 @@ extension AnalyticsViewController: UICollectionViewDataSource {
         cell.layoutIfNeeded()
         
         card.fetchData(profile.profileID, clientID: clientID, accessToken: accessToken) { gaAnalytics in
-            
-            
-            
+            cell.gaAnalytics = gaAnalytics
         }
         
         return cell

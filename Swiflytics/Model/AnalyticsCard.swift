@@ -52,6 +52,7 @@ struct AnalyticsCard {
                 + "&key=\(clientID)"
                 + "&access_token=\(accessToken)"
                 + "&fields=columnHeaders/name,rows,totalResults,totalsForAllResults"
+                + "&sort=-\(metric.rawValue)"
         
         NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: url)!) { (data, response, error) -> Void in
             

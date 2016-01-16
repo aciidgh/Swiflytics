@@ -203,6 +203,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="PbS-en-9R3" id="i9B-nB-Xrf"/>
+                        <segue destination="k4A-sR-CZO" kind="show" id="caN-Bl-R7l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0I-Db-sf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -222,7 +223,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaN-Ut-Gp8">
-                                <rect key="frame" x="0.0" y="20" width="0.0" height="0.0"/>
+                                <rect key="frame" x="0.0" y="64" width="0.0" height="0.0"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="7Ba-aV-h7M"/>
@@ -230,7 +231,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Eyb-S2-Cuw">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="RaA-TS-3v4">
                                     <size key="itemSize" width="495" height="176"/>
@@ -264,17 +265,75 @@
                                                         <constraint firstItem="CDj-SW-3tj" firstAttribute="leading" secondItem="p1k-7O-Vix" secondAttribute="leading" constant="16" id="nVH-hP-DE6"/>
                                                     </constraints>
                                                 </view>
+                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C5j-XU-lGj">
+                                                    <rect key="frame" x="0.0" y="39.5" width="495" height="132.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <prototypes>
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnalyticsCardDataTableViewCell" rowHeight="26" id="Abn-cR-bm6" customClass="AnalyticsCardDataTableViewCell" customModule="Swiflytics" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="28" width="495" height="26"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Abn-cR-bm6" id="rA4-GN-UPr">
+                                                                <rect key="frame" x="0.0" y="0.0" width="495" height="26"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="/swift/2016/01/12/swift-m..builtin-module/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gw-kg-vF0">
+                                                                        <rect key="frame" x="8" y="4" width="272" height="17"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUP-Mz-tbv">
+                                                                        <rect key="frame" x="463" y="4" width="24" height="17"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44T-GE-cN0">
+                                                                        <rect key="frame" x="8" y="25" width="487" height="1"/>
+                                                                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="1" id="ijd-qX-876"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="44T-GE-cN0" secondAttribute="bottom" id="LMu-9Y-JfY"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="GUP-Mz-tbv" secondAttribute="trailing" constant="8" id="OK4-5p-WGU"/>
+                                                                    <constraint firstItem="GUP-Mz-tbv" firstAttribute="centerY" secondItem="rA4-GN-UPr" secondAttribute="centerY" id="VeC-e5-rPU"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="44T-GE-cN0" secondAttribute="trailing" id="Ze9-TT-mm8"/>
+                                                                    <constraint firstItem="GUP-Mz-tbv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1gw-kg-vF0" secondAttribute="trailing" constant="20" id="aWb-XN-K8a"/>
+                                                                    <constraint firstItem="44T-GE-cN0" firstAttribute="leading" secondItem="rA4-GN-UPr" secondAttribute="leading" constant="8" id="br2-qb-D3A"/>
+                                                                    <constraint firstItem="1gw-kg-vF0" firstAttribute="centerY" secondItem="rA4-GN-UPr" secondAttribute="centerY" id="pga-e6-INM"/>
+                                                                    <constraint firstItem="1gw-kg-vF0" firstAttribute="leading" secondItem="rA4-GN-UPr" secondAttribute="leading" constant="8" id="z1h-61-rzn"/>
+                                                                </constraints>
+                                                            </tableViewCellContentView>
+                                                            <connections>
+                                                                <outlet property="dimensionLabel" destination="1gw-kg-vF0" id="Jrx-cE-iXJ"/>
+                                                                <outlet property="metricLabel" destination="GUP-Mz-tbv" id="S8c-5F-clL"/>
+                                                            </connections>
+                                                        </tableViewCell>
+                                                    </prototypes>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="Yxo-Uy-Zg0" id="f5K-hk-Apv"/>
+                                                        <outlet property="delegate" destination="Yxo-Uy-Zg0" id="pwf-hn-AIW"/>
+                                                    </connections>
+                                                </tableView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="C5j-XU-lGj" firstAttribute="top" secondItem="p1k-7O-Vix" secondAttribute="bottom" constant="4" id="SCn-WW-gLX"/>
+                                            <constraint firstAttribute="bottom" secondItem="C5j-XU-lGj" secondAttribute="bottom" constant="4" id="U0I-l5-udt"/>
                                             <constraint firstItem="p1k-7O-Vix" firstAttribute="leading" secondItem="Yxo-Uy-Zg0" secondAttribute="leading" id="WZd-jP-YMx"/>
+                                            <constraint firstAttribute="trailing" secondItem="C5j-XU-lGj" secondAttribute="trailing" id="aFe-RS-rkQ"/>
                                             <constraint firstItem="p1k-7O-Vix" firstAttribute="top" secondItem="Yxo-Uy-Zg0" secondAttribute="top" id="oQl-0k-gKv"/>
+                                            <constraint firstItem="C5j-XU-lGj" firstAttribute="leading" secondItem="Yxo-Uy-Zg0" secondAttribute="leading" id="vai-zR-moi"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="cardTitle" destination="CDj-SW-3tj" id="6LY-Vg-ExT"/>
                                             <outlet property="cardTitleContainer" destination="p1k-7O-Vix" id="75m-PT-qCZ"/>
+                                            <outlet property="dataTableView" destination="C5j-XU-lGj" id="nKz-Ie-64Z"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

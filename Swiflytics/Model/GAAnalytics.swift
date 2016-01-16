@@ -15,6 +15,10 @@ struct GAAnalytics {
     
     let dimensionValues: [String]
     let metricValues: [String]
+    
+    var count: Int {
+        return dimensionValues.count
+    }
 }
 
 

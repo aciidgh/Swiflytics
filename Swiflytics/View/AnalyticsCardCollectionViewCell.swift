@@ -21,6 +21,13 @@ class AnalyticsCardCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var cardTitle: UILabel!
     @IBOutlet var cardTitleContainer: UIView!
+    @IBOutlet var dataTableView: UITableView!
+    
+    var gaAnalytics: GAAnalytics? {
+        didSet {
+            self.dataTableView.reloadData()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -45,3 +52,26 @@ class AnalyticsCardCollectionViewCell: UICollectionViewCell {
         layer.shadowOpacity = 1;
     }
 }
+
+extension AnalyticsCardCollectionViewCell: UITableViewDataSource {
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let gaAnalytics = gaAnalytics else { return 0 }
+        return gaAnalytics.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(String(AnalyticsCardDataTableViewCell), forIndexPath: indexPath) as! AnalyticsCardDataTableViewCell
+        guard let gaAnalytics = gaAnalytics else { return cell }
+        cell.dimensionLabel.text = gaAnalytics.dimensionValues[indexPath.row]
+        cell.metricLabel.text = gaAnalytics.metricValues[indexPath.row]
+        return cell
+    }
+}
+
+extension AnalyticsCardCollectionViewCell: UITableViewDelegate {
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 26
+    }
+}
+
