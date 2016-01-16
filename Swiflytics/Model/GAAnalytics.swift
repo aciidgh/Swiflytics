@@ -6,8 +6,15 @@
 //  Copyright © 2016 ankit.im. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
-class GAAnalytics: NSObject {
-
+struct GAAnalytics {
+    
+    let dimension: AnalyticsDimension
+    let metric: AnalyticsMetric
+    
+    let dimensionValues: [String]
+    let metricValues: [String]
 }
+
+

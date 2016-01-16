@@ -14,6 +14,8 @@ class AnalyticsViewController: UIViewController, StoryboardInstantiable {
     
     var profile: GAPropertyProfile!
     var cards = [AnalyticsCard]()
+    let clientID = GIDSignIn.sharedInstance().clientID
+    let accessToken = GIDSignIn.sharedInstance().currentUser.authentication.accessToken
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -37,6 +39,12 @@ extension AnalyticsViewController: UICollectionViewDataSource {
         let card = cards[indexPath.row]
         cell.cardTitle.text = card.cardName
         cell.layoutIfNeeded()
+        
+        card.fetchData(profile.profileID, clientID: clientID, accessToken: accessToken) { gaAnalytics in
+            
+            
+            
+        }
         
         return cell
     }
