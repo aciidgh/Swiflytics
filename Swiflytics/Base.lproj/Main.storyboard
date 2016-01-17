@@ -458,7 +458,7 @@
                                         <rect key="frame" x="0.0" y="1" width="600" height="61"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Select Dimension">
+                                        <state key="normal">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -468,11 +468,19 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disclosure_indicator" translatesAutoresizingMaskIntoConstraints="NO" id="ZTg-3u-qxt">
                                         <rect key="frame" x="576" y="24" width="8" height="13"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Dimension" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqR-Qs-MKZ">
+                                        <rect key="frame" x="16" y="21.5" width="133" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="yqR-Qs-MKZ" firstAttribute="centerY" secondItem="6Oz-I2-Ayf" secondAttribute="centerY" id="3ZK-u5-Kix"/>
                                     <constraint firstAttribute="trailing" secondItem="ZTg-3u-qxt" secondAttribute="trailing" constant="16" id="C3b-ky-Rl8"/>
                                     <constraint firstItem="dsN-T4-XN0" firstAttribute="leading" secondItem="6Oz-I2-Ayf" secondAttribute="leading" id="JTh-uf-yIF"/>
+                                    <constraint firstItem="yqR-Qs-MKZ" firstAttribute="leading" secondItem="6Oz-I2-Ayf" secondAttribute="leading" constant="16" id="RPZ-rf-ati"/>
                                     <constraint firstAttribute="bottom" secondItem="bJF-T2-Omg" secondAttribute="bottom" id="WIT-zX-7Wq"/>
                                     <constraint firstItem="dsN-T4-XN0" firstAttribute="top" secondItem="6Oz-I2-Ayf" secondAttribute="top" id="XAa-fi-SPi"/>
                                     <constraint firstAttribute="height" constant="62" id="YVI-JB-dkc"/>
@@ -507,13 +515,19 @@
                                         <rect key="frame" x="0.0" y="1" width="600" height="61"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Select Metric">
+                                        <state key="normal">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="metricButtonPressed:" destination="fVE-ck-k0B" eventType="touchUpInside" id="uNP-ME-KB5"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Metric" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOy-Ht-d5e">
+                                        <rect key="frame" x="16" y="21" width="102" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -521,12 +535,14 @@
                                     <constraint firstAttribute="height" constant="62" id="67a-o5-NxY"/>
                                     <constraint firstItem="kyM-QV-T8Q" firstAttribute="leading" secondItem="o9s-M8-G0N" secondAttribute="leading" id="8WZ-9s-1Jh"/>
                                     <constraint firstAttribute="trailing" secondItem="JE3-XK-efm" secondAttribute="trailing" id="BzA-ry-lgO"/>
+                                    <constraint firstItem="uOy-Ht-d5e" firstAttribute="leading" secondItem="o9s-M8-G0N" secondAttribute="leading" constant="16" id="HHv-mz-fSr"/>
                                     <constraint firstAttribute="bottom" secondItem="jC2-wV-uJs" secondAttribute="bottom" id="HOi-Ju-fgC"/>
                                     <constraint firstAttribute="bottom" secondItem="kyM-QV-T8Q" secondAttribute="bottom" id="LGf-p0-w0D"/>
                                     <constraint firstAttribute="trailing" secondItem="kyM-QV-T8Q" secondAttribute="trailing" id="QXo-bZ-cxh"/>
                                     <constraint firstItem="JE3-XK-efm" firstAttribute="top" secondItem="o9s-M8-G0N" secondAttribute="top" id="ZSb-sE-1Kv"/>
                                     <constraint firstItem="jC2-wV-uJs" firstAttribute="leading" secondItem="o9s-M8-G0N" secondAttribute="leading" id="ecs-9X-ezF"/>
                                     <constraint firstItem="0OF-OS-cIv" firstAttribute="centerY" secondItem="o9s-M8-G0N" secondAttribute="centerY" id="fal-os-hLI"/>
+                                    <constraint firstItem="uOy-Ht-d5e" firstAttribute="centerY" secondItem="o9s-M8-G0N" secondAttribute="centerY" id="kad-VH-Oiq"/>
                                     <constraint firstItem="JE3-XK-efm" firstAttribute="leading" secondItem="o9s-M8-G0N" secondAttribute="leading" id="lae-Qy-hPk"/>
                                     <constraint firstAttribute="trailing" secondItem="0OF-OS-cIv" secondAttribute="trailing" constant="16" id="rIH-4x-6WY"/>
                                     <constraint firstItem="kyM-QV-T8Q" firstAttribute="top" secondItem="JE3-XK-efm" secondAttribute="bottom" id="wyt-dF-pzS"/>
@@ -570,7 +586,9 @@
                     <connections>
                         <outlet property="cardNameField" destination="kOs-JJ-WDY" id="oP5-Gt-h0X"/>
                         <outlet property="dimensionButton" destination="bJF-T2-Omg" id="jNB-kf-dSK"/>
+                        <outlet property="dimensionLabel" destination="yqR-Qs-MKZ" id="O2Y-C7-OXJ"/>
                         <outlet property="metricButton" destination="kyM-QV-T8Q" id="nio-lj-FNV"/>
+                        <outlet property="metricLabel" destination="uOy-Ht-d5e" id="vJ4-db-2ew"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YcK-yu-Bg3" userLabel="First Responder" sceneMemberID="firstResponder"/>

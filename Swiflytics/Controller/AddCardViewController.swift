@@ -15,6 +15,8 @@ class AddCardViewController: UIViewController, StoryboardInstantiable {
  
     @IBOutlet var dimensionButton: UIButton!
     @IBOutlet var metricButton: UIButton!
+    @IBOutlet var dimensionLabel: UILabel!
+    @IBOutlet var metricLabel: UILabel!
     @IBOutlet var cardNameField: UITextField!
     
     var metric: AnalyticsMetric? {
@@ -40,11 +42,11 @@ class AddCardViewController: UIViewController, StoryboardInstantiable {
     func updateView() {
         
         if let dimension = dimension {
-            self.dimensionButton.titleLabel?.text = dimension.rawValue
+            self.dimensionLabel.text = dimension.rawValue
         }
         
         if let metric = metric {
-            self.metricButton.titleLabel?.text = metric.rawValue
+            self.metricLabel.text = metric.rawValue
         }
     }
 
