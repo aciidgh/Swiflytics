@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
         return true
     }
-
+    
     func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
         let source: String = options[UIApplicationOpenURLOptionsSourceApplicationKey] as! String
         return GIDSignIn.sharedInstance().handleURL(url, sourceApplication: source, annotation: options[UIApplicationOpenURLOptionsAnnotationKey])

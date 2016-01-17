@@ -18,7 +18,7 @@ extension UIView {
 }
 
 protocol AnalyticsCardDelegate: NSObjectProtocol {
-    func didRemoveCard()
+    func didPressRemoveCard(card: AnalyticsCard)
 }
 
 class AnalyticsCardCollectionViewCell: UICollectionViewCell {
@@ -37,8 +37,7 @@ class AnalyticsCardCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func removeCard(sender: AnyObject) {
-        CardManager.sharedManager.removeCard(card)
-        delegate?.didRemoveCard()
+        delegate?.didPressRemoveCard(card)
     }
     
     override func awakeFromNib() {

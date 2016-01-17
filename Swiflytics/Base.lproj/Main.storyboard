@@ -203,7 +203,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="PbS-en-9R3" id="i9B-nB-Xrf"/>
-                        <segue destination="k4A-sR-CZO" kind="show" id="caN-Bl-R7l"/>
+                        <segue destination="k4A-sR-CZO" kind="show" identifier="dsd" id="caN-Bl-R7l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0I-Db-sf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -226,8 +226,8 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="122"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaH-pe-SCa">
-                                        <rect key="frame" x="284.5" y="30" width="32" height="62.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                        <rect key="frame" x="276" y="13.5" width="49" height="95.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                         <color key="textColor" red="0.2901960784" green="0.63921568630000003" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -397,7 +397,7 @@
                     <connections>
                         <outlet property="activeUsersLabel" destination="YaH-pe-SCa" id="Th0-05-BZo"/>
                         <outlet property="collectionView" destination="Eyb-S2-Cuw" id="DV4-6R-keE"/>
-                        <segue destination="fVE-ck-k0B" kind="show" id="mhp-FU-gRm"/>
+                        <segue destination="fVE-ck-k0B" kind="show" identifier="dsd" id="mhp-FU-gRm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8NQ-ZB-X2s" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -79,8 +79,20 @@ class AnalyticsViewController: UIViewController, StoryboardInstantiable {
 }
 
 extension AnalyticsViewController: AnalyticsCardDelegate {
-    func didRemoveCard() {
-        refreshPressed(nil)
+    func didPressRemoveCard(card: AnalyticsCard) {
+        
+        let alert = UIAlertController(title: "Remove Card", message: "Are you sure?", preferredStyle: .Alert)
+        let yesAction = UIAlertAction(title: "Yes", style: .Destructive) { (action) in
+            CardManager.sharedManager.removeCard(card)
+            self.refreshPressed(nil)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        
+        alert.addAction(yesAction)
+        alert.addAction(cancelAction)
+        
+        presentViewController(alert, animated: true, completion: nil)
     }
 }
 

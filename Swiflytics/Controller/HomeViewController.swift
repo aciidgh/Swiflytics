@@ -101,6 +101,7 @@ extension HomeViewController: UITableViewDataSource {
         
         cell.mainTitle.text = profile.propertyName
         cell.subTitle.text = profile.profileName
+        cell.iconImageView.image = profile.profileType == GAProfileSummaryType.Web ? UIImage(named: "computer_icon") : UIImage(named: "mobile_icon")
         
         return cell
     }
