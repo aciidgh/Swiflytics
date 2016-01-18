@@ -25,7 +25,15 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>im.ankit.swiflytics</string>
+				<string>com.company.swiflytics</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.228056752171-e1md0gccl825gt14e4o1jsb9c8p81jjp</string>
 			</array>
 		</dict>
 	</array>
